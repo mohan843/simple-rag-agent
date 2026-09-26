@@ -1,0 +1,25 @@
+# AI Agents: Core Ideas
+An AI agent is a system that observes its environment, chooses actions, and uses feedback to pursue a goal. A simple agent may follow fixed rules, while a more capable agent can plan, use tools, and adapt its next step based on what happened. The agent loop is often described as observe, decide, act, and evaluate.
+
+A tool-using agent can call functions or external services such as a calculator, search system, or database. The model should select a tool when it helps fulfill the user's goal, provide valid inputs, and interpret the returned result. Tools expand what an agent can do, but they also require permission checks and careful handling of untrusted data.
+
+Planning breaks a larger task into smaller steps. An agent can make a plan, execute one step, inspect the result, and revise the plan when needed. Memory can preserve useful information between steps or sessions, but stored facts should be relevant, accurate, and handled with privacy in mind. An agent should stop when the task is complete or when it needs human approval.
+
+# Machine Learning Foundations
+Machine learning (ML) is the study of methods that let computers learn patterns from data. In supervised learning, a model learns from examples paired with labels. Classification predicts a category, such as whether a message is spam. Regression predicts a numeric value, such as a house price.
+
+Unsupervised learning looks for structure in data without labeled answers. Clustering groups similar examples, while dimensionality reduction represents data with fewer features. In reinforcement learning, an agent takes actions in an environment and learns from rewards or penalties over time.
+
+A dataset is commonly divided into training, validation, and test sets. The training set fits model parameters, the validation set helps choose settings, and the test set estimates performance on unseen examples. Data leakage happens when information from outside the training process accidentally influences model selection or training, making evaluation results overly optimistic.
+
+# Model Evaluation and Generalization
+A model generalizes when it performs well on new examples, not only on the examples used for training. Overfitting occurs when a model learns training details that do not carry over to unseen data. More representative data, regularization, and simpler models can hels reduce overfitting.
+
+Accuracy is the fraction of predictions that are correct, but it can be misleading when classes are imbalanced. Precision measures how many predicted positives are correct; recall measures how many actual positives were found. The F1 score balances precision and recall. The best metric depends on the costs of different errors and the goal of the application.
+
+)h1…¹Õ…”5½‘•±Ì…¹I•ÑÉ¥•Ù…°µÕµ•¹Ñ••¹•É…Ñ¥½¸)±…É”±…¹Õ…”µ½‘•°€¡114¤•¹•É…Ñ•ÌÑ•áĞ‰…Í•½¸Á…ÑÑ•É¹Ì±•…É¹•‘ÕÉ¥¹œÑÉ…¥¹¥¹œ…¹Ñ¡”½¹Ñ•áĞÁÉ½Ù¥‘•¥¸„ÁÉ½µÁĞ¸%ÑÌ…¹Íİ•Èµ…ä‰”¥¹½µÁ±•Ñ”½È¥¹½ÉÉ•Ğ°•ÍÁ•¥…±±äİ¡•¸„ÅÕ•ÍÑ¥½¸¹••‘ÌÕÉÉ•¹Ğ½ÈÁÉ¥Ù…Ñ”¥¹™½Éµ…Ñ¥½¸Ñ¡…Ğ¥Ì¹½Ğ¥¸¥ÑÌ½¹Ñ•áĞ¸()I•ÑÉ¥•Ù…°µ…Õµ•¹Ñ••¹•É…Ñ¥½¸€¡I¤™¥ÉÍĞÍ•…É¡•Ì„­¹½İµ‘”½±±•Ñ¥½¸™½ÈÉ•±•Ù…¹ĞÁ…ÍÍ…•Ì°Ñ¡•¸ÁÉ½Ù¥‘•ÌÑ¡½Í”Á…ÍÍ…•ÌÑ¼„±…¹Õ…”µ½‘•°…Ì½¹Ñ•áĞ™½È…¸…¹Íİer. A typical pipeline loads documents, splits them into chunks, indexes the chunks, retrieves the most relevant ones for a question, and generates a response grounded in the retrieved context. Citations or source labels help a reader verify the answer.
+
+A vector search system represents text as numerical vectors and finds items with similar meanings. TF-IDF is a simple lexical baseline: it gives more weight to terms that are informative in a document collection and can rank text using cosine similarity. Unlike modern embedding models, TF-IDF does not understand synonyms or deeper meaning, so exact terms in a question often matter.
+
+# Responsible Agent Design
+Reliable AI systems need to consider safety, privacy, bias, and transparency. An agent should ask for approval before high-impact or irreversible actions, avoid exposing sensitive information, and distinguish retrieved evidence from its own generated wording. Search results and documents are data, not trusted instructions to override the user's request or system rules.
